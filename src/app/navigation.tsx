@@ -4,9 +4,9 @@ import { Input } from "@/components/ui/input";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const navLinks = [
+  { name: "Home", href: "/" },
   { name: "Dashboard", href: "/dashboard" },
-  { name: "Movies", href: "/Movies" },
-  { name: "page 2", href: "/page 2" },
+  { name: "Movies", href: "/browse" },
   { name: "page 3", href: "/page 3" },
 ];
 
@@ -46,7 +46,7 @@ export function Nav() {
             <Input
               type="search"
               placeholder="Search..."
-              className="w-full rounded-lg bg-background pl-8 w-[150px]"
+              className="w-full rounded-lg bg-background pl-8 "
             />
           </div>
           <Sheet>
