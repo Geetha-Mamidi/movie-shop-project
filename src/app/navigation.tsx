@@ -2,6 +2,7 @@ import { Menu, Search, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import SignInOrOut from "@/components/signin-signup-logout";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -37,7 +38,7 @@ export function Nav() {
               className="w-full rounded-lg bg-background pl-8 md:w-[200px] lg:w-[300px]"
             />
           </div>
-          <Button variant="outline">Sign In</Button>
+          <SignInOrOut />
         </div>
 
         <div className="flex items-center md:hidden">
@@ -68,7 +69,7 @@ export function Nav() {
                   </a>
                 ))}
                 <div className="border-t pt-4">
-                  <Button className="w-full">Sign In</Button>
+                  <SignInOrOut />
                 </div>
               </div>
             </SheetContent>
