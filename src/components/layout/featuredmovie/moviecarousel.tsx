@@ -15,7 +15,7 @@ import {
 import nosferatu from "./nosferatu.jpg";
 import superman from "./superman.jpg";
 import Image from "next/image";
-import minecraft from "./minecraft.avif";
+import minecraft from "./minecraft.jpg";
 
 interface MovieSample {
   title: string;
@@ -70,7 +70,7 @@ export function FeaturedCarousel() {
 
               <div className="w-full h-1/2 sm:w-2/3 sm:h-full flex flex-col justify-center items-center p-6 space-y-4">
                 <CardTitle className="text-2xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">
-                  {movie.title} test
+                  {movie.title}
                 </CardTitle>
                 <CardDescription className="text-base sm:text-lg text-gray-600 max-w-lg text-center">
                   {movie.desc} <br />
