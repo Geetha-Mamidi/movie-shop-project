@@ -1,10 +1,18 @@
 import fs from "node:fs";
 import path from "node:path";
-import { prisma } from "@/lib/prisma";
-//import { prisma } from "../src/lib/prisma";
-import { Prisma } from "@/generated/prisma/client";
-import type { ArtistRole } from "@/generated/prisma/enums";
-import type { Genre, Artist } from "@/generated/prisma/client";
+import { PrismaClient, Prisma } from "../src/generated/prisma/client";
+import { PrismaPg } from "@prisma/adapter-pg";
+import type { ArtistRole } from "../src/generated/prisma/enums";
+import type { Genre, Artist } from "../src/generated/prisma/client";
+import "dotenv/config";
+
+const adapter = new PrismaPg({
+  connectionString: process.env.DATABASE_URL,
+});
+
+const prisma = new PrismaClient({
+  adapter,
+});
 
 // Paths to JSON files
 const genresPath = path.join(__dirname, "genres.json");
