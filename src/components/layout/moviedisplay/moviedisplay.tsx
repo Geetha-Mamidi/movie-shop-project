@@ -26,7 +26,7 @@ function dataHandler(movies: MovieSample[]) {
       moviesCopy.push(fillerMovie);
     }
   }
-  return movies;
+  return moviesCopy;
 }
 
 export default function MovieDisplay({

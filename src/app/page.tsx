@@ -51,10 +51,7 @@ export default function Home() {
     <div className=" bg-zinc-50 font-sans dark:bg-black">
       <main className="w-9/10 m-auto">
         <div>
-          <FeaturedCarousel
-            sectionTitle="Most Purchased Movies"
-            movieData={testData}
-          />
+          <FeaturedCarousel movieData={testData} />
         </div>
         <div>
           <GenreList />
