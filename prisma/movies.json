@@ -9,8 +9,8 @@
     "runtime": 120,
     "genres": ["Action", "Thriller"],
     "artists": [
-      { "name": "Alex Actor", "role": "ACTOR" },
-      { "name": "Dana Director", "role": "DIRECTOR" }
+      { "name": "Alex", "role": "ACTOR" },
+      { "name": "Dana", "role": "DIRECTOR" }
     ]
   },
   {
@@ -22,9 +22,9 @@
     "runtime": 105,
     "genres": ["Drama"],
     "artists": [
-      { "name": "Lily Star", "role": "ACTOR" },
+      { "name": "Lily", "role": "ACTOR" },
       { "name": "Charlotte Bloom", "role": "ACTOR" },
-      { "name": "Dana Director", "role": "DIRECTOR" }
+      { "name": "Dana", "role": "DIRECTOR" }
     ]
   },
   {
@@ -37,7 +37,7 @@
     "genres": ["Sci-Fi", "Adventure"],
     "artists": [
       { "name": "Ethan Blaze", "role": "ACTOR" },
-      { "name": "Jordan Vision", "role": "DIRECTOR" }
+      { "name": "Jordan", "role": "DIRECTOR" }
     ]
   },
   {
@@ -50,7 +50,7 @@
     "genres": ["Fantasy", "Adventure"],
     "artists": [
       { "name": "Isabella Frost", "role": "ACTOR" },
-      { "name": "Maya Magic", "role": "DIRECTOR" }
+      { "name": "Maya", "role": "DIRECTOR" }
     ]
   },
   {
@@ -62,9 +62,9 @@
     "runtime": 95,
     "genres": ["Comedy"],
     "artists": [
-      { "name": "Chris Comic", "role": "ACTOR" },
+      { "name": "Chris", "role": "ACTOR" },
       { "name": "Emma Bright", "role": "ACTOR" },
-      { "name": "Dana Director", "role": "DIRECTOR" }
+      { "name": "Dana", "role": "DIRECTOR" }
     ]
   },
   {
@@ -76,7 +76,7 @@
     "runtime": 110,
     "genres": ["Horror", "Thriller"],
     "artists": [
-      { "name": "Victor Villain", "role": "ACTOR" },
+      { "name": "Victor", "role": "ACTOR" },
       { "name": "Leo Phantom", "role": "DIRECTOR" }
     ]
   },
@@ -91,7 +91,7 @@
     "artists": [
       { "name": "Sophia Dawn", "role": "ACTOR" },
       { "name": "Olivia Grace", "role": "ACTOR" },
-      { "name": "Dana Director", "role": "DIRECTOR" }
+      { "name": "Dana", "role": "DIRECTOR" }
     ]
   },
   {
@@ -118,7 +118,7 @@
     "genres": ["War", "Drama"],
     "artists": [
       { "name": "Lucas Storm", "role": "ACTOR" },
-      { "name": "Dana Director", "role": "DIRECTOR" }
+      { "name": "Dana", "role": "DIRECTOR" }
     ]
   },
   {
@@ -145,7 +145,7 @@
     "artists": [
       { "name": "Ella Sparks", "role": "ACTOR" },
       { "name": "Charlotte Bloom", "role": "ACTOR" },
-      { "name": "Dana Director", "role": "DIRECTOR" }
+      { "name": "Dana", "role": "DIRECTOR" }
     ]
   },
   {
@@ -157,8 +157,8 @@
     "runtime": 118,
     "genres": ["Action", "Sci-Fi"],
     "artists": [
-      { "name": "Alex Actor", "role": "ACTOR" },
-      { "name": "Jordan Vision", "role": "DIRECTOR" }
+      { "name": "Alex", "role": "ACTOR" },
+      { "name": "Jordan", "role": "DIRECTOR" }
     ]
   },
   {
@@ -184,7 +184,7 @@
     "genres": ["Sci-Fi"],
     "artists": [
       { "name": "Ethan Blaze", "role": "ACTOR" },
-      { "name": "Jordan Vision", "role": "DIRECTOR" }
+      { "name": "Jordan", "role": "DIRECTOR" }
     ]
   },
   {
@@ -196,7 +196,7 @@
     "runtime": 108,
     "genres": ["Musical", "Romance"],
     "artists": [
-      { "name": "Sophia Singer", "role": "ACTOR" },
+      { "name": "Sophia", "role": "ACTOR" },
       { "name": "Grace Melody", "role": "DIRECTOR" }
     ]
   },
@@ -223,7 +223,7 @@
     "genres": ["Crime", "Drama"],
     "artists": [
       { "name": "James Noir", "role": "ACTOR" },
-      { "name": "Dana Director", "role": "DIRECTOR" }
+      { "name": "Dana", "role": "DIRECTOR" }
     ]
   },
   {
@@ -235,7 +235,7 @@
     "runtime": 108,
     "genres": ["Horror", "Mystery"],
     "artists": [
-      { "name": "Victor Villain", "role": "ACTOR" },
+      { "name": "Victor", "role": "ACTOR" },
       { "name": "Leo Phantom", "role": "DIRECTOR" }
     ]
   },
@@ -249,7 +249,7 @@
     "genres": ["Fantasy", "Adventure"],
     "artists": [
       { "name": "Isabella Frost", "role": "ACTOR" },
-      { "name": "Maya Magic", "role": "DIRECTOR" }
+      { "name": "Maya", "role": "DIRECTOR" }
     ]
   },
   
@@ -277,7 +277,7 @@
   "genres": ["Sci-Fi", "Adventure"],
   "artists": [
     { "name": "Ethan Blaze", "role": "ACTOR" },
-    { "name": "Jordan Vision", "role": "DIRECTOR" }
+    { "name": "Jordan", "role": "DIRECTOR" }
   ]
 },
 {
@@ -289,7 +289,7 @@
   "runtime": 106,
   "genres": ["Horror", "Mystery"],
   "artists": [
-    { "name": "Victor Villain", "role": "ACTOR" },
+    { "name": "Victor", "role": "ACTOR" },
     { "name": "Leo Phantom", "role": "DIRECTOR" }
   ]
 },
@@ -302,7 +302,7 @@
   "runtime": 112,
   "genres": ["Musical", "Drama"],
   "artists": [
-    { "name": "Sophia Singer", "role": "ACTOR" },
+    { "name": "Sophia", "role": "ACTOR" },
     { "name": "Grace Melody", "role": "DIRECTOR" }
   ]
 },
@@ -315,7 +315,7 @@
   "runtime": 124,
   "genres": ["Action", "Adventure"],
   "artists": [
-    { "name": "Alex Actor", "role": "ACTOR" },
+    { "name": "Alex", "role": "ACTOR" },
     { "name": "Daniel Steel", "role": "DIRECTOR" }
   ]
 },
@@ -328,7 +328,7 @@
   "runtime": 110,
   "genres": ["Musical", "Romance"],
   "artists": [
-    { "name": "Sophia Singer", "role": "ACTOR" },
+    { "name": "Sophia", "role": "ACTOR" },
     { "name": "Grace Melody", "role": "DIRECTOR" }
   ]
 },
@@ -342,7 +342,7 @@
   "genres": ["Thriller", "Sci-Fi"],
   "artists": [
     { "name": "Henry Bold", "role": "ACTOR" },
-    { "name": "Jordan Vision", "role": "DIRECTOR" }
+    { "name": "Jordan", "role": "DIRECTOR" }
   ]
 },
 {
@@ -355,7 +355,7 @@
   "genres": ["Mystery", "Drama"],
   "artists": [
     { "name": "Charlotte Bloom", "role": "ACTOR" },
-    { "name": "Dana Director", "role": "DIRECTOR" }
+    { "name": "Dana", "role": "DIRECTOR" }
   ]
 },
 {
@@ -394,7 +394,7 @@
   "genres": ["Fantasy", "Adventure"],
   "artists": [
     { "name": "Isabella Frost", "role": "ACTOR" },
-    { "name": "Maya Magic", "role": "DIRECTOR" }
+    { "name": "Maya", "role": "DIRECTOR" }
   ]
 },
 {
@@ -407,7 +407,7 @@
   "genres": ["War", "Drama"],
   "artists": [
     { "name": "Lucas Storm", "role": "ACTOR" },
-    { "name": "Dana Director", "role": "DIRECTOR" }
+    { "name": "Dana", "role": "DIRECTOR" }
   ]
 },
 {
@@ -420,7 +420,7 @@
   "genres": ["Sci-Fi", "Thriller"],
   "artists": [
     { "name": "Ethan Blaze", "role": "ACTOR" },
-    { "name": "Jordan Vision", "role": "DIRECTOR" }
+    { "name": "Jordan", "role": "DIRECTOR" }
   ]
 },
 {
@@ -434,7 +434,7 @@
   "artists": [
     { "name": "Sophia Dawn", "role": "ACTOR" },
     { "name": "Olivia Grace", "role": "ACTOR" },
-    { "name": "Dana Director", "role": "DIRECTOR" }
+    { "name": "Dana", "role": "DIRECTOR" }
   ]
 },
 {
@@ -446,7 +446,7 @@
   "runtime": 121,
   "genres": ["Action", "Thriller"],
   "artists": [
-    { "name": "Alex Actor", "role": "ACTOR" },
+    { "name": "Alex", "role": "ACTOR" },
     { "name": "Daniel Steel", "role": "DIRECTOR" }
   ]
 },
@@ -460,7 +460,7 @@
   "genres": ["Adventure", "Drama"],
   "artists": [
     { "name": "Charlotte Bloom", "role": "ACTOR" },
-    { "name": "Dana Director", "role": "DIRECTOR" }
+    { "name": "Dana", "role": "DIRECTOR" }
   ]
 },
 {
@@ -472,7 +472,7 @@
   "runtime": 109,
   "genres": ["Musical", "Romance"],
   "artists": [
-    { "name": "Sophia Singer", "role": "ACTOR" },
+    { "name": "Sophia", "role": "ACTOR" },
     { "name": "Grace Melody", "role": "DIRECTOR" }
   ]
 },
@@ -499,7 +499,7 @@
   "genres": ["Drama", "Adventure"],
   "artists": [
     { "name": "Ella Sparks", "role": "ACTOR" },
-    { "name": "Dana Director", "role": "DIRECTOR" }
+    { "name": "Dana", "role": "DIRECTOR" }
   ]
 },
 {
@@ -512,7 +512,7 @@
   "genres": ["Sport", "Drama"],
   "artists": [
     { "name": "Lucas Storm", "role": "ACTOR" },
-    { "name": "Dana Director", "role": "DIRECTOR" }
+    { "name": "Dana", "role": "DIRECTOR" }
   ]
 }
 

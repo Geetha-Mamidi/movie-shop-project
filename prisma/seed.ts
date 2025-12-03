@@ -36,7 +36,6 @@ const moviesData: {
 const artistsData: { name: string; bio?: string; imageUrl?: string | null }[] =
   JSON.parse(fs.readFileSync(artistsPath, "utf-8"));
 
-// Ensure genres exist
 async function ensureGenres(genres: typeof genresData) {
   const results: Record<string, Genre> = {};
   for (const g of genres) {
@@ -46,7 +45,6 @@ async function ensureGenres(genres: typeof genresData) {
   return results;
 }
 
-// Ensure artists exist
 async function ensureArtists(artists: typeof artistsData) {
   const results: Record<string, Artist> = {};
   for (const a of artists) {
@@ -56,7 +54,6 @@ async function ensureArtists(artists: typeof artistsData) {
   return results;
 }
 
-// Ensure movie exists
 async function ensureMovie(movie: (typeof moviesData)[0]) {
   const relDate = new Date(movie.releaseDate);
   const existing = await prisma.movie.findFirst({
@@ -78,13 +75,10 @@ async function ensureMovie(movie: (typeof moviesData)[0]) {
     },
   });
 }
-
-// Link artist to movie
 async function linkArtistToMovie(
   movieId: string,
   artistId: string,
-  role: ArtistRole,
-  opts?: { billingOrder?: number }
+  role: ArtistRole
 ) {
   const existing = await prisma.movieArtist.findFirst({
     where: { movieId, artistId, role },
@@ -92,7 +86,7 @@ async function linkArtistToMovie(
   if (existing) return existing;
 
   return prisma.movieArtist.create({
-    data: { movieId, artistId, role, billingOrder: opts?.billingOrder },
+    data: { movieId, artistId, role },
   });
 }
 
