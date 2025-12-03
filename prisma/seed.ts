@@ -1,18 +1,12 @@
 import fs from "node:fs";
 import path from "node:path";
-import { PrismaClient, Prisma } from "../src/generated/prisma/client";
-import { PrismaPg } from "@prisma/adapter-pg";
+import { Prisma } from "../src/generated/prisma/client";
+import { prisma } from "../src/lib/prisma";
 import type { ArtistRole } from "../src/generated/prisma/enums";
 import type { Genre, Artist } from "../src/generated/prisma/client";
 import "dotenv/config";
 
-const adapter = new PrismaPg({
-  connectionString: process.env.DATABASE_URL,
-});
-
-const prisma = new PrismaClient({
-  adapter,
-});
+// Use the shared Prisma client exported from `src/lib/prisma`
 
 // Paths to JSON files
 const genresPath = path.join(__dirname, "genres.json");
@@ -20,10 +14,10 @@ const moviesPath = path.join(__dirname, "movies.json");
 const artistsPath = path.join(__dirname, "artists.json");
 
 // Load data from JSON files
-const genresData: { name: string; description?: string }[] = JSON.parse(
+const genresData: Pick<Genre, "name" | "description">[] = JSON.parse(
   fs.readFileSync(genresPath, "utf-8")
 );
-const moviesData: {
+type MovieSeed = {
   title: string;
   description?: string;
   price: string;
@@ -31,10 +25,15 @@ const moviesData: {
   stock?: number;
   runtime?: number;
   genres: string[];
-  artists: { name: string; role: ArtistRole }[];
-}[] = JSON.parse(fs.readFileSync(moviesPath, "utf-8"));
-const artistsData: { name: string; bio?: string; imageUrl?: string | null }[] =
-  JSON.parse(fs.readFileSync(artistsPath, "utf-8"));
+  artists?: { name: string; role: ArtistRole }[];
+};
+
+const moviesData: MovieSeed[] = JSON.parse(
+  fs.readFileSync(moviesPath, "utf-8")
+);
+const artistsData: Pick<Artist, "name" | "bio" | "imageUrl">[] = JSON.parse(
+  fs.readFileSync(artistsPath, "utf-8")
+);
 
 async function ensureGenres(genres: typeof genresData) {
   const results: Record<string, Genre> = {};
