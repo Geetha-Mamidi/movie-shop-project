@@ -1,8 +1,8 @@
-// Landing page
-// o Top 5 most purchased movie
-// o Top 5 most recent movies
-// o Top 5 Oldest Movies
-// o Top 5 cheapest Movie
+//✅ Landing page
+//✅ o Top 5 most purchased movie - Partially done, needs data integration
+//✅ o Top 5 most recent movies - Partially done, needs data integration
+//✅ o Top 5 Oldest Movies - Partially done, needs data integration
+//✅ o Top 5 cheapest Movie - Partially done, needs data integration
 // Optional Implement a simple recommendation system based on user purchase
 // history, favorite genres, directors, or actors
 // Add movies to cart (stored in cookies)
@@ -21,6 +21,7 @@ export interface MovieSample {
   imgLink: any;
   youtube?: string;
   desc: string;
+  price: number;
 }
 // Temporary test data
 const testData: MovieSample[] = [
@@ -28,16 +29,19 @@ const testData: MovieSample[] = [
     title: "Nosferatu",
     imgLink: nosferatu,
     desc: "A classic horror movie about a vampire.",
+    price: 999,
   },
   {
     title: "Superman",
     imgLink: superman,
-    desc: "The iconic superhero film.",
+    desc: "The iconic superhero film, featuring the adventures of Superman.",
+    price: 1499,
   },
   {
     title: "Minecraft",
     imgLink: minecraft,
     desc: "A movie adaptation of the popular video game.",
+    price: 1999,
   },
 ];
 
