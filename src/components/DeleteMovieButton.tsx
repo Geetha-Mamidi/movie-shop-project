@@ -63,11 +63,11 @@ export function DeleteMovieButton({ movieId, movieTitle }: { movieId: string; mo
           <AlertDialogCancel asChild>
             <Button variant="secondary">Cancel</Button>
           </AlertDialogCancel>
-          <AlertDialogAction asChild>
-  <Button className="bg-red-600 text-white hover:bg-red-700" onClick={handleDelete} disabled={isPending}>
-    {isPending ? "Deleting..." : "Delete"}
-  </Button>
-</AlertDialogAction>
+          <Button variant="destructive" asChild>
+            <AlertDialogAction onClick={handleDelete} disabled={isPending}>
+              {isPending ? "Deleting..." : "Delete"}
+            </AlertDialogAction>
+          </Button>
         </div>
       </AlertDialogContent>
     </AlertDialog>
