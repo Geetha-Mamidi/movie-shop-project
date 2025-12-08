@@ -29,19 +29,19 @@ const testData: MovieSample[] = [
     title: "Nosferatu",
     imgLink: nosferatu,
     desc: "A classic horror movie about a vampire.",
-    price: 9.99,
+    price: 999,
   },
   {
     title: "Superman",
     imgLink: superman,
     desc: "The iconic superhero film, featuring the adventures of Superman.",
-    price: 14.99,
+    price: 1499,
   },
   {
     title: "Minecraft",
     imgLink: minecraft,
     desc: "A movie adaptation of the popular video game.",
-    price: 19.99,
+    price: 1999,
   },
 ];
 

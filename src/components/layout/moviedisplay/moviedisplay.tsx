@@ -14,6 +14,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
+import PriceDisplay from "@/components/prise-display";
 
 //Temporary filler for list and temp interface
 import nosferatu from "../../layout/featuredmovie/nosferatu.jpg";
@@ -23,7 +24,7 @@ const fillerMovie: MovieSample = {
   title: "Filler Movie",
   imgLink: nosferatu,
   desc: "This is a filler movie used for testing the movie display component.",
-  price: 1.99,
+  price: 199,
 };
 
 //dataHandler to ensure at least 10 movies are displayed
@@ -58,7 +59,7 @@ export default function MovieDisplay({
         {movies.map((movie, index) => (
           <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/5">
             <div>
-              <Card className="min-h-92 p-0">
+              <Card className="min-h-95 p-0">
                 <CardContent className="p-1 grow flex flex-col">
                   <Image
                     src={movie.imgLink}
@@ -73,7 +74,7 @@ export default function MovieDisplay({
                       {movie.title}
                     </CardTitle>
                     <p className="text-center font-bold flex justify-center rounded-full">
-                      ${movie.price}
+                      {PriceDisplay(movie)}
                     </p>
                     <CardDescription className="flex items-end line-clamp-2 text-center bg-amber-50">
                       {movie.desc}
