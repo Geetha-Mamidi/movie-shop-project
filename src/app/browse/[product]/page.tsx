@@ -1,59 +1,53 @@
 //✅ View detailed movie information
-// Add movies to cart (stored in cookies)
+// Add movies to cart (stored in cookies) TODO add actual function
 // Optional Allow customers to rate and review purchased movies
 // Optional Enable users to add movies to a wishlist for future purchase
 // ✅ Optinal Add functionality to link and display movie trailers (embedded YouTube videos)
 // Optinal Add buttons to share movie links on social media platforms
 
-import { testData, MovieSample } from "@/app/page";
-import MovieDetailPage from "@/components/layout/moviedetailview/moviedetailview";
+import React from "react";
+import { redirect } from "next/navigation";
+import {
+  getMovieByFlexibleParam,
+  getSimilarMoviesByGenres,
+} from "@/components/sharedutils/movie-fetch";
+import MovieDetailPage from "@/components/layout/moviedetailview/detailed-movie-view";
+import MovieNotFound from "@/components/layout/moviedetailview/movie-not-found";
+import {
+  normalizeToSlug,
+  generateMovieUrl,
+} from "@/components/sharedutils/slug-utils";
 
-function normalizeForMatch(s: string | undefined) {
-  if (!s) return "";
-  return s
-    .toLowerCase()
-    .trim()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/(^-|-$)/g, "");
+interface PageParams {
+  params: Promise<{ product: string }>;
 }
 
+/**
+ * Movie Detail Page
+ * Handles fetching movie by ID or title
+ */
 export default async function DetailPage({
   params,
-}: {
-  params: Promise<{ product: string }>;
-}) {
-  const rawParam = (await params).product;
-  const paramNormalized = normalizeForMatch(rawParam);
+}: PageParams): Promise<React.ReactNode> {
+  const { product } = await params;
 
-  // Try to find a matching movie by normalized title, slug, or id
-  const matched: MovieSample | undefined = testData.find((m: any) => {
-    const titleNorm = normalizeForMatch(m.title ?? "");
-    const slugNorm = normalizeForMatch((m as any).slug ?? "");
-    const idNorm = normalizeForMatch((m as any).id?.toString?.() ?? "");
+  // Attempt to find the movie by either its UUID or its title
+  const movie = await getMovieByFlexibleParam(product);
 
-    return (
-      paramNormalized === titleNorm ||
-      paramNormalized === slugNorm ||
-      paramNormalized === idNorm ||
-      // also allow direct lowercase title match without normalization
-      rawParam.toLowerCase() ===
-        (m.title ?? m.name ?? "").toString().toLowerCase()
-    );
-  });
-
-  if (!matched) {
-    return (
-      <div>
-        <h1 className="text-3xl font-bold text-center">
-          Product not found: {rawParam}
-        </h1>
-      </div>
-    );
+  if (!movie) {
+    return <MovieNotFound searchTerm={product} />;
   }
 
-  return (
-    <div>
-      <MovieDetailPage params={{ id: matched.title }} />
-    </div>
-  );
+  /*changes the URL to match pattern UUID - Title
+   */
+  const expectedParam = `${movie.id}-${normalizeToSlug(movie.title ?? "")}`;
+  if (product !== expectedParam) {
+    redirect(generateMovieUrl(movie.id, movie.title));
+  }
+
+  // Fetch similar movies based on genres (server-side pre-fetching)
+  const genreIds = movie.genres.map((g) => g.id);
+  const similarMovies = await getSimilarMoviesByGenres(movie.id, genreIds, 6);
+
+  return <MovieDetailPage movie={movie} similarMovies={similarMovies} />;
 }
